@@ -98,31 +98,29 @@
       ]
     },
     {
-      "id": 7,
-      "title": "new",
+      "id": "7",
+      "title": "Car",
       "group": "Rooms",
-      "notes": "hi",
+      "notes": "drive",
       "days": [
         0,
-        1,
-        2,
-        3
+        6
       ],
       "sessions": [
-        4,
-        3
+        1,
+        4
       ]
     },
     {
-      "id": 8,
-      "title": "new",
-      "group": "Kit",
-      "notes": "hi",
-      "days": [
-        1
-      ],
+      "id": "c7b9",
+      "title": "a",
+      "group": "Rooms",
+      "notes": "aa",
       "sessions": [
-        2
+        0
+      ],
+      "days": [
+        3
       ]
     }
   ],

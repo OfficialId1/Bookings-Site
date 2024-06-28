@@ -12,7 +12,7 @@ export default function BookableDetails({bookable}) {
   }
 
   return (
-    <div>
+    <div>a
       {bookable && 
         <div className='bookable-details item'>
             <div className="item-header">
@@ -60,7 +60,7 @@ export default function BookableDetails({bookable}) {
                 </div>
               </div>
             }
-        </div>
+        </div>  
       }
     </div>
   )

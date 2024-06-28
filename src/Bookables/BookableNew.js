@@ -19,12 +19,13 @@ export default function BookableNew () {
     then(res => res.json())
   );
 
-  const idArray = [...new Set(bookables.map(b => b.id))];
-  console.log('idArray', idArray);
-  const maxId = Math.max(...idArray);
-  console.log('maxId', maxId);
+  // const idArray = [...new Set(bookables.map(b => b.id))];
+  // console.log('idArray', idArray);
+  // const maxId = Math.max(...idArray);
+  // console.log('maxId', maxId);
   
-  const formState = useFormState(0, maxId);
+  // const formState = useFormState(0, maxId);
+  const formState = useFormState();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
 
@@ -43,7 +44,7 @@ export default function BookableNew () {
   )
 
   function handleSubmit(){
-    setCountId(countId++);
+    // setCountId(countId++);
     createBookable(formState.state);
   }
 

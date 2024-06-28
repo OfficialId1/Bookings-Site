@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function useFormState (data, countId) {
+export default function useFormState (data) {
   const [state, setState] = useState(data);
   // const [arr, setArr] = useState([]);
   // const [name, setName] = useState('');
@@ -19,7 +19,7 @@ export default function useFormState (data, countId) {
     setState({
       ...state,
       [e.target.name]: e.target.value,
-      id : data ? state.id : countId+1
+      // id : data ? state.id : countId+1
     });
   }
 

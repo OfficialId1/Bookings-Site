@@ -40,7 +40,7 @@ export default function BookableEdit () {
       }
     }
   );
-
+ 
   function updateBookablesCache (bookable, queryClient) {
     const bookables = queryClient.getQueryData("bookables") || [];
   

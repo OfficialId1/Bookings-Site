@@ -37,6 +37,25 @@
       ]
     },
     {
+      "id": "3",
+      "group": "Rooms",
+      "title": "Games Room",
+      "notes": "Table tennis, table football, pinball! There's also a selection of board games. Please tidy up!",
+      "sessions": [
+        0,
+        2,
+        4
+      ],
+      "days": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
       "id": "4",
       "group": "Rooms",
       "title": "Lounge",
@@ -61,7 +80,7 @@
     {
       "id": "5",
       "group": "Kit",
-      "title": "Projector Edit",
+      "title": "Projector",
       "notes": "Portable but powerful. Keep it with the case. Be careful, it gets quite hot after a while!",
       "sessions": [
         1,
@@ -74,8 +93,7 @@
         2,
         3,
         4,
-        5,
-        1
+        5
       ]
     },
     {
@@ -95,32 +113,6 @@
         4,
         5,
         6
-      ]
-    },
-    {
-      "id": "7",
-      "title": "Car",
-      "group": "Rooms",
-      "notes": "drive",
-      "days": [
-        0,
-        6
-      ],
-      "sessions": [
-        1,
-        4
-      ]
-    },
-    {
-      "id": "c7b9",
-      "title": "a",
-      "group": "Rooms",
-      "notes": "aa",
-      "sessions": [
-        0
-      ],
-      "days": [
-        3
       ]
     }
   ],
@@ -158,7 +150,7 @@
     {
       "session": "Lunch",
       "date": "2020-06-22",
-      "bookableId": 1,
+      "bookableId": "1",
       "title": "Onboarding",
       "bookerId": 3,
       "id": "1"
@@ -166,7 +158,7 @@
     {
       "session": "Lunch",
       "date": "2020-06-23",
-      "bookableId": 3,
+      "bookableId": "3",
       "title": "Football Challenge",
       "bookerId": 3,
       "id": "2"
@@ -174,7 +166,7 @@
     {
       "session": "Morning",
       "date": "2020-06-24",
-      "bookableId": 1,
+      "bookableId": "1",
       "title": "Movie Pitch!",
       "bookerId": 2,
       "id": "3"
@@ -182,7 +174,7 @@
     {
       "session": "Evening",
       "date": "2020-06-25",
-      "bookableId": 1,
+      "bookableId": "1",
       "title": "Meeting Room",
       "bookerId": 2,
       "id": "4"
@@ -190,7 +182,7 @@
     {
       "session": "Breakfast",
       "date": "2020-06-26",
-      "bookableId": 3,
+      "bookableId": "3",
       "title": "Tiddlywinks",
       "bookerId": 2,
       "id": "5"
@@ -198,7 +190,7 @@
     {
       "session": "Lunch",
       "date": "2020-06-26",
-      "bookableId": 1,
+      "bookableId": "1",
       "title": "New Employee Intro",
       "bookerId": 1,
       "id": "7"
@@ -206,7 +198,7 @@
     {
       "session": "Afternoon",
       "date": "2020-06-23",
-      "bookableId": 1,
+      "bookableId": "1",
       "title": "Project Update",
       "bookerId": 1,
       "id": "8"
@@ -214,7 +206,7 @@
     {
       "session": "Afternoon",
       "date": "2020-06-22",
-      "bookableId": 2,
+      "bookableId": "2",
       "title": "Quiz",
       "bookerId": 1,
       "id": "9"

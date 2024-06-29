@@ -12,7 +12,7 @@ export default function BookableDetails({bookable}) {
   }
 
   return (
-    <div>a
+    <div>
       {bookable && 
         <div className='bookable-details item'>
             <div className="item-header">

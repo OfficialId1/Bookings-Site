@@ -6,25 +6,8 @@ import { createItem } from "../utils/api";
 
 import BookableForm from "./BookableForm";
 import PageSpinner from "../UI/PageSpinner";
-// import { useState } from "react";
 
 export default function BookableNew () {
-  // let [countId, setCountId] = useState(1000);
-
-  // console.log('countId', countId);
-
-  const {data : bookables = []} = useQuery(
-    'bookables',
-    () => fetch('http://localhost:3001/bookables').
-    then(res => res.json())
-  );
-
-  // const idArray = [...new Set(bookables.map(b => b.id))];
-  // console.log('idArray', idArray);
-  // const maxId = Math.max(...idArray);
-  // console.log('maxId', maxId);
-  
-  // const formState = useFormState(0, maxId);
   const formState = useFormState();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
@@ -60,8 +43,6 @@ export default function BookableNew () {
     <BookableForm
       formState={formState}
       handleSubmit={handleSubmit}
-      // countId={countId}
-      // maxId = {maxId}
     />
   );
 }

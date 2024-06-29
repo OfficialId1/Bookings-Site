@@ -15,7 +15,7 @@ export default function BookingsPage() {
   const {date, bookableId} = useBookingsParams();
 
   const bookable = bookables.find(
-    b => b.id == bookableId
+    b => b.id === bookableId
   ) || bookables[0];
 
   function getUrl(id){

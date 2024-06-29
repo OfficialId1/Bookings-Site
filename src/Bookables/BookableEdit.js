@@ -9,18 +9,20 @@ import PageSpinner from "../UI/PageSpinner";
 
 export default function BookableEdit () {
   const {id} = useParams();
+  console.log('id', typeof parseInt(id));
   const queryClient = useQueryClient();
 
   const {data : bookable = {}, isLoading}= useQuery(  
     ['bookable','id'],
     () => fetch(`http://localhost:3001/bookables/${id}`).
     then(res => res.json()),
+    // .then(()=> console.log('bookable id')),
     {
       refetchOnWindowFocus: false,
 
       initialData: queryClient
         .getQueryData("bookables")
-        ?.find(b => b.id == parseInt(id, 10))
+        ?.find(b => b.id === id, 10)
     }
   );
 
@@ -44,7 +46,7 @@ export default function BookableEdit () {
   function updateBookablesCache (bookable, queryClient) {
     const bookables = queryClient.getQueryData("bookables") || [];
   
-    const bookableIndex = bookables.findIndex(b => b.id == bookable.id);
+    const bookableIndex = bookables.findIndex(b => b.id === bookable.id);
   
     if (bookableIndex !== -1) {
       bookables[bookableIndex] = bookable;
@@ -62,7 +64,7 @@ export default function BookableEdit () {
 
         queryClientDel.setQueryData(
           "bookables",
-          bookables.filter(b => b.id != bookable.id)
+          bookables.filter(b => b.id !== bookable.id)
         );
 
         navigate(`/bookables/${getIdForFirstInGroup(bookables, bookable) || ""}`);
@@ -73,7 +75,7 @@ export default function BookableEdit () {
   function getIdForFirstInGroup (bookables, excludedBookable) {
     const {id, group} = excludedBookable;
   
-    const bookableInGroup = bookables.find(b => b.group == group && b.id != id);
+    const bookableInGroup = bookables.find(b => b.group === group && b.id != id);
   
     return bookableInGroup?.id;
   }

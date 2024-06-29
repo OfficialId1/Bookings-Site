@@ -4,12 +4,10 @@ import { useUser } from "../Users/UserContext";
 
 export default function BookingDetails({booking, bookable}) {
   const [user] = useUser();
-  // console.log('user', user);
   
-  // const isBooker = booking && user && (booking.bookerId == user.id);
-  // This is not working?
+  const isBooker = booking && user && (booking.bookerId === user.id);
 
-  const isBooker = booking && user && (booking.bookerId == user.id);
+  // const isBooker = booking && user && (booking.bookerId == user.id);
   
   return (
     <div className='booking-details'>

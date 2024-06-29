@@ -31,14 +31,14 @@ export function useBookingsParams(){
     : new Date();
 
   // const idInt = parseInt(bookableId, 10);
-  const idInt = bookableId;
+  // const idInt = bookableId;
   // const hasId = !isNaN(idInt);
-  const hasId = idInt;
+  // const hasId = idInt;
 
   function setBookingsDate(date){
     const params = {};
 
-    if(hasId) {params.bookableId = bookableId}
+    if(bookableId) {params.bookableId = bookableId}
     if(isDate(date)) {params.date = date}
 
     if(params.date || params.bookableId !== undefined) {
@@ -48,7 +48,7 @@ export function useBookingsParams(){
 
   return{
     date,
-    bookableId: hasId ? idInt : undefined,
+    bookableId: bookableId ? bookableId : undefined,
     setBookingsDate
   };
 }

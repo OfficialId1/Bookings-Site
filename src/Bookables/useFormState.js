@@ -5,6 +5,7 @@ export default function useFormState (data) {
   // const [arr, setArr] = useState([]);
   // const [name, setName] = useState('');
 
+  console.log('data', data);
   console.log('state', state);
   // console.log('arr', arr);
 
@@ -18,7 +19,7 @@ export default function useFormState (data) {
     
     setState({
       ...state,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
       // id : data ? state.id : countId+1
     });
   }

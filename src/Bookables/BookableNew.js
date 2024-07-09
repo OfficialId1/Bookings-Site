@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useMutation, useQuery, useQueryClient } from "react-query";
+import { useMutation, useQueryClient } from "react-query";
 
 import useFormState from "./useFormState";
 import { createItem } from "../utils/api";
@@ -27,7 +27,6 @@ export default function BookableNew () {
   )
 
   function handleSubmit(){
-    // setCountId(countId++);
     createBookable(formState.state);
   }
 

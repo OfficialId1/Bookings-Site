@@ -152,7 +152,7 @@
       "date": "2020-06-22",
       "bookableId": "1",
       "title": "Onboarding",
-      "bookerId": 3,
+      "bookerId": "3",
       "id": "1"
     },
     {
@@ -160,7 +160,7 @@
       "date": "2020-06-23",
       "bookableId": "3",
       "title": "Football Challenge",
-      "bookerId": 3,
+      "bookerId": "3",
       "id": "2"
     },
     {
@@ -176,7 +176,7 @@
       "date": "2020-06-25",
       "bookableId": "1",
       "title": "Meeting Room",
-      "bookerId": 2,
+      "bookerId": "2",
       "id": "4"
     },
     {
@@ -184,7 +184,7 @@
       "date": "2020-06-26",
       "bookableId": "3",
       "title": "Tiddlywinks",
-      "bookerId": 2,
+      "bookerId": "2",
       "id": "5"
     },
     {
@@ -192,7 +192,7 @@
       "date": "2020-06-26",
       "bookableId": "1",
       "title": "New Employee Intro",
-      "bookerId": 1,
+      "bookerId": "1",
       "id": "7"
     },
     {
@@ -200,7 +200,7 @@
       "date": "2020-06-23",
       "bookableId": "1",
       "title": "Project Update",
-      "bookerId": 1,
+      "bookerId": "1",
       "id": "8"
     },
     {
@@ -208,7 +208,7 @@
       "date": "2020-06-22",
       "bookableId": "2",
       "title": "Quiz",
-      "bookerId": 1,
+      "bookerId": "1",
       "id": "9"
     }
   ]

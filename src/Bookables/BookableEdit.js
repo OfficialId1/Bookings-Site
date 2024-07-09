@@ -9,14 +9,13 @@ import PageSpinner from "../UI/PageSpinner";
 
 export default function BookableEdit () {
   const {id} = useParams();
-  console.log('id', typeof parseInt(id));
+  // console.log('id', typeof parseInt(id));
   const queryClient = useQueryClient();
 
   const {data : bookable = {}, isLoading}= useQuery(  
     ['bookable','id'],
     () => fetch(`http://localhost:3001/bookables/${id}`).
     then(res => res.json()),
-    // .then(()=> console.log('bookable id')),
     {
       refetchOnWindowFocus: false,
 

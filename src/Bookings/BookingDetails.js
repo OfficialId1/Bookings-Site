@@ -24,7 +24,6 @@ export default function BookingDetails({booking, bookable}) {
 
     if(item.id === undefined){
       createBooking({...item, bookerId : user.id});
-      console.log('edit', isEditing);
     } else {
       updateBooking(item);
     }

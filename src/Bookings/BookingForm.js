@@ -4,7 +4,7 @@ import { FaCloudUploadAlt, FaTrash } from 'react-icons/fa';
 import useFormState from '../Bookables/useFormState';
 
 export default function BookingForm({booking, bookable, onSave, onDelete}) {
-    const {date, session, notes} = booking;
+    const date = booking?.date;
     const {state, handleChange} = useFormState(booking);
     const {title} = state;
     const isNew = booking?.id === undefined;
@@ -20,6 +20,7 @@ export default function BookingForm({booking, bookable, onSave, onDelete}) {
                     name='title'
                     value={title}
                     onChange={handleChange}
+                    size={15}
                 />
             </p>
 
@@ -30,15 +31,15 @@ export default function BookingForm({booking, bookable, onSave, onDelete}) {
             <p>{(new Date(date).toLocaleDateString())}</p>
 
             <label>Session</label>
-            <p>{session}</p>
+            <p>{booking.session}</p>
 
             <label>Notes</label>
             <p>
                 <textarea 
                     name="notes" 
-                    rows={6}
+                    rows={3}
                     cols={30}
-                    value={notes}
+                    value={booking.notes}
                     onChange={handleChange}
                 ></textarea>
             </p>

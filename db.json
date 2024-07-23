@@ -58,7 +58,7 @@
     {
       "id": "4",
       "group": "Rooms",
-      "title": "Lounge",
+      "title": "Lounge room",
       "notes": "A relaxing place to hang out. Ideal for bean bag wranglers and sofa surfers. Help yourself to a beer after hours.",
       "sessions": [
         0,
@@ -193,8 +193,7 @@
       "bookableId": "1",
       "title": "New Employee Intro",
       "bookerId": "1",
-      "id": "7",
-      "notes": "chnage"
+      "id": "7"
     },
     {
       "session": "Afternoon",

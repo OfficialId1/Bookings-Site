@@ -15,8 +15,6 @@ export default function BookablesView() {
   );
 
   const {id} = useParams();
-  // console.log('id', id);
-  // console.log('parseInt(id, 10)', parseInt(id, 10));
   const bookable = bookables.find(b => b.id === id) || bookables[0];
 
   if(status === "error"){

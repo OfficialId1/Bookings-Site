@@ -39,6 +39,9 @@ export function transformBookings(bookingsArray){
   return bookings;
 }
 
+
+// Alernate Testing code
+
 // export function transformBookings(bookingsArray){
 //   return bookingsArray.reduce((bookings, booking) => {
 //     const {session, date} = booking;

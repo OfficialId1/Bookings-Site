@@ -193,7 +193,8 @@
       "bookableId": "1",
       "title": "New Employee Intro",
       "bookerId": "1",
-      "id": "7"
+      "id": "7",
+      "notes": "chnage"
     },
     {
       "session": "Afternoon",

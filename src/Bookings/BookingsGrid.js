@@ -2,7 +2,6 @@ import { transformBookings } from "./grid-builder";
 import { Fragment, useEffect, } from "react";
 import Spinner from '../UI/Spinner';
 import { useGrid } from "./bookingsHooks";
-import useFetch from "../utils/useFetch";
 import { shortISO } from "../utils/date-wrangler";
 import { useQuery } from "react-query";
 

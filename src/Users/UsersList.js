@@ -1,6 +1,5 @@
 import { useQuery } from 'react-query';
 import Spinner from '../UI/Spinner';
-import useFetch from '../utils/useFetch';
 
 export default function UsersList({user, setUser}) {
   const {data : users = [], status} = useQuery(

@@ -2,12 +2,6 @@ import { useState, useEffect } from "react";
 
 export default function useFormState (data) {
   const [state, setState] = useState(data);
-  // const [arr, setArr] = useState([]);
-  // const [name, setName] = useState('');
-
-  console.log('data', data);
-  console.log('state', state);
-  // console.log('arr', arr);
 
   useEffect(() => {
     if (data) {
@@ -16,14 +10,42 @@ export default function useFormState (data) {
   }, [data]);
 
   function handleChange (e) {
-    
     setState({
       ...state,
       [e.target.name]: e.target.value
-      // id : data ? state.id : countId+1
     });
   }
 
+  function handleChecked (e) {
+    const {name, value, checked} = e.target;
+    
+    const values = new Set(state[name]);
+    const intValue = parseInt(value, 10);
+
+    values.delete(intValue);
+    if (checked) values.add(intValue);
+
+    setState({
+      ...state,
+      [name]: [...values]
+    });
+  }
+
+  return {
+    state,
+    handleChange,
+    handleChecked
+  };
+
+
+
+
+
+
+  //Alternate Testing codes
+  
+  // const [arr, setArr] = useState([]);
+  // const [name, setName] = useState('');
 
   // function handleCheck(e){
   //   console.log('e.target', e.target.checked);
@@ -43,27 +65,6 @@ export default function useFormState (data) {
   //     [name] : arr
   //   })
   // }, [arr])
-
-  function handleChecked (e) {
-    const {name, value, checked} = e.target;
-    
-    const values = new Set(state[name]);
-    const intValue = parseInt(value, 10);
-
-    values.delete(intValue);
-    if (checked) values.add(intValue);
-
-    setState({
-      ...state,
-      [name]: [...values]
-    });
-  }
-
-  console.log('state', state);
-
-  return {
-    state,
-    handleChange,
-    handleChecked
-  };
 }
+
+  

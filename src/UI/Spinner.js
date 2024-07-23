@@ -1,8 +1,8 @@
 import {FaSpinner} from 'react-icons/fa';
 
-export default function Spinner() {
+export default function Spinner(props) {
   return (
-    <span>
+    <span {...props}>
         <FaSpinner className='icon-loading'/>
     </span>
   )
